@@ -1,0 +1,6 @@
+{
+  "name": "ILJC x JEECE - Diagnostic & Automatisation",
+  "description": "Plateforme conjointe IAE Lyon Junior Conseil et JEECE : Diagnostic organisationnel et automatisation technique clé en main.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
