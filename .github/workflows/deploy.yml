@@ -18,9 +18,9 @@ jobs:
       with:
         node-version: 18
 
-    - name: Installation et Build
+    - - name: Installation et Build
       run: |
-        npm install
+        npm install --legacy-peer-deps
         npm run build
 
     - name: Synchronisation FTP
