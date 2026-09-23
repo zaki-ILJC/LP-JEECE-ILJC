@@ -1,0 +1,11 @@
+Logos officiels fournis par les deux structures, détourés sur fond transparent :
+  iljc.webp   IAE Lyon Junior Conseil, version couleur (fonds clairs)
+  iljc-blanc.webp   version blanche (fonds navy : partenariat, pied de page)
+  jeece.webp   JEECE, logo complet (symbole + mot), pour les pages de présentation
+  jeece-blanc.webp   version blanche du logo complet
+  jeece-h.webp         verrouillage horizontal JEECE (symbole + mot) : en-tête, pied de page, branches
+  jeece-h-blanc.webp   version blanche du verrouillage horizontal
+  jeece-mot.webp       mot-symbole JEECE seul, en réserve
+  jeece-mot-blanc.webp   version blanche du mot-symbole
+Si un fichier venait à manquer, le site affiche un logo typographique de remplacement.
+Reste à ajouter : /public/og-image.webp   (1200 x 630) pour les aperçus de liens.

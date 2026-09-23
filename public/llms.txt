@@ -1,0 +1,21 @@
+# ILJC x JEECE : diagnostic et automatisation des processus
+
+> Offre conjointe de deux Junior-Entreprises françaises. IAE Lyon Junior Conseil (ILJC) réalise le diagnostic organisationnel ; JEECE met en place les solutions techniques. Prestation clé en main pour PME, ETI et organisations publiques, à Lyon, Paris et partout en France.
+
+## L'offre
+- Diagnostic ILJC : analyse des processus et de l'organisation, audit des systèmes d'information, diagnostic socio-économique selon la méthode ISEOR, cartographie des flux et recommandations.
+- Transition structurée : transmission du diagnostic, priorisation, cadrage de la solution technique.
+- Expertise JEECE : automatisations et scripts sur mesure, intégration d'intelligence artificielle, déploiement technique.
+- Livraison : documentation, formation des équipes, outil directement utilisable.
+- ILJC et JEECE figurent toutes deux dans la L30 et totalisent plus de 800 clients signés.
+- Cas client (PME de 40 collaborateurs) : doublons et tâches manuelles ; diagnostic SI et scoring des irritants par ILJC ; 3 processus automatisés par JEECE ; résultat -40 % de temps administratif.
+
+## Les structures
+- IAE Lyon Junior Conseil : Junior-Entreprise de l'iaelyon School of Management, Université Jean Moulin Lyon 3. Fondée en 2010. Membre de la L30 (30 meilleures Junior-Entreprises de France), comme JEECE. 99 % de satisfaction. Partenaire de l'ISEOR. Contact : contact@iaelyonjuniorconseil.fr, 04 78 78 73 50.
+- JEECE : Junior-Entreprise de l'école d'ingénieurs ECE, fondée en 1986 (Paris et Lyon). 14 ans dans le top 30 des Junior-Entreprises, plus de 4 400 intervenants mobilisables, 96 % de satisfaction. Électronique, digital, data et IA. Contact : contact@jeece.fr, 01 81 51 15 56.
+
+## Pages
+- [Accueil](https://jeece.iaelyonjuniorconseil.fr/)
+- [Méthodologie](https://jeece.iaelyonjuniorconseil.fr/methodologie)
+- [Structures](https://jeece.iaelyonjuniorconseil.fr/structures)
+- [Contact et demande de diagnostic](https://jeece.iaelyonjuniorconseil.fr/contact)

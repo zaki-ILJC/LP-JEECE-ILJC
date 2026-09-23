@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+/*
+ * Charte ILJC x JEECE, relevée sur la plaquette commerciale :
+ * navy ardoise, bleu IAE Lyon, bleu ciel "Junior Conseil", vert JEECE,
+ * et les trois pastels des cartes piliers.
+ */
+@theme {
+  --color-primary: #1f2d44;            /* encre : titres et textes forts */
+  --color-primary-container: #34465f;  /* navy ardoise des aplats de la plaquette */
+  --color-royal-blue: #004aad;         /* bleu IAE Lyon */
+  --color-sky: #46b1e5;                /* bleu ciel "Junior Conseil" */
+  --color-jeece: #3fae5a;              /* vert JEECE (aplats, filets) */
+  --color-secondary: #1d7a3b;          /* vert foncé : boutons et textes (contraste AA) */
+  --color-pastel-green: #c6e6ce;
+  --color-pastel-slate: #c3cad3;
+  --color-pastel-blue: #b0c6e6;
+
+  --color-surface: #ffffff;
+  --color-light-slate: #eef2f6;
+  --color-border-gray: #d4dbe3;
+  --color-on-surface: #1f2d44;
+  --color-on-surface-variant: #4b5669;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #bcc6d4;
+  --color-outline: #7a8494;
+
+  --font-display: "League Spartan", "Arial Black", sans-serif;
+  --font-headline: "League Spartan", "Arial", sans-serif;
+  --font-body: "Lexend", "Segoe UI", system-ui, sans-serif;
+  --font-condensed: "Bebas Neue", "Arial Narrow", sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  color: var(--color-on-surface);
+  background: var(--color-surface);
+}
+
+.font-display { font-family: var(--font-display); }
+.font-headline { font-family: var(--font-headline); }
+.font-body { font-family: var(--font-body); }
+.font-condensed { font-family: var(--font-condensed); letter-spacing: 0.02em; }
+
+/* Chevrons du "déroulé d'une étude" (plaquette) */
+.chevron-path { clip-path: polygon(0% 0%, 88% 0%, 100% 50%, 88% 100%, 0% 100%, 12% 50%); }
+.chevron-start { clip-path: polygon(0% 0%, 88% 0%, 100% 50%, 88% 100%, 0% 100%); }
+.chevron-end { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 12% 50%); }
+
+/* Filet tricolore navy / vert / bleu, repris des bandes diagonales de la plaquette */
+.brand-rule {
+  height: 4px;
+  background: linear-gradient(90deg,
+    var(--color-primary-container) 0 33.33%,
+    var(--color-jeece) 33.33% 66.66%,
+    var(--color-royal-blue) 66.66% 100%);
+}
+
+/* Titres de section : capitales grasses comme sur la plaquette */
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  line-height: 1.05;
+  color: var(--color-primary);
+}
+
+/* Accordéon FAQ natif */
+details > summary { list-style: none; cursor: pointer; }
+details > summary::-webkit-details-marker { display: none; }
+details[open] .faq-sign { transform: rotate(45deg); }
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+/* --- Confort et accessibilité --- */
+html { scroll-behavior: smooth; }
+
+:where(button, a, input, select, textarea, summary):focus-visible {
+  outline: 2px solid var(--color-royal-blue);
+  outline-offset: 2px;
+}
+
+@media (max-width: 767px) {
+  input, select, textarea { font-size: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* --- Hero : rubans ILJC (bleu) et JEECE (vert) --- */
+@keyframes ribbon-in {
+  from { opacity: 0; transform: translate3d(8%, 3%, 0) rotate(-2.5deg); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes ribbon-float {
+  from { transform: translate3d(0, 0, 0) rotate(0deg); }
+  to   { transform: translate3d(0, -12px, 0) rotate(-0.6deg); }
+}
+@keyframes rise {
+  from { opacity: 0; transform: translate3d(0, 14px, 0); }
+  to   { opacity: 1; transform: none; }
+}
+.hero-ribbon { animation: ribbon-in 1.3s cubic-bezier(.22, 1, .36, 1) both; }
+.hero-float { animation: ribbon-float 9s ease-in-out 1.3s infinite alternate; will-change: transform; }
+.hero-rise { animation: rise .7s cubic-bezier(.22, 1, .36, 1) both; }
+.hero-callout { animation: rise .6s ease-out both; }
+
+/* Sur grand écran le ruban passe sous le texte : son départ s'efface */
+@media (min-width: 1024px) {
+  .hero-ribbon-img {
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 42%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 42%);
+  }
+}
+
+/* --- Micro-schémas des trois engagements --- */
+@keyframes glyph-grow { 50% { transform: scaleY(1.25); } }
+
+.glyph-bar, .glyph-chevron { transition: transform .35s cubic-bezier(.22, 1, .36, 1), opacity .35s; }
+.glyph-bar { transform-origin: bottom; }
+
+.engagement:hover .glyph-bar-1 { transform: scaleY(0.78); }
+.engagement:hover .glyph-bar-2 { transform: scaleY(0.72); }
+.engagement:hover .glyph-bar-3 { transform: scaleY(0.6); }
+.engagement:hover .glyph-bar-4 { opacity: 1; }
+.engagement:hover .glyph-chevron { transform: translateX(6px); }
+.engagement:hover .glyph-chevron-1 { transform: translateX(0); }
+.engagement:hover .glyph-chevron-2 { transform: translateX(2px); }
+.engagement:hover .glyph-chevron-3 { transform: translateX(4px); }
